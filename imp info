@@ -1,0 +1,18 @@
+
+//Commands generate SSH Keys for MAC
+Create SSH RSA Asymmetric Public/Private Key
+ssh-keygen -t rsa -f ~/.ssh/gccloudsshvm// -C gesrinu9
+
+Connect to Compute Engine Instance
+ssh -i PATH_TO_PRIVATE_KEY USERNAME@EXTERNAL_IP
+ssh -i gccloudsshvm gesrinu9@34.125.27.152
+
+//How to enable the password instead of ssh keys
+sudo -i
+cd /etc/ssh
+vi sshd_config
+# To disable tunneled clear text passwords, change to no here!
+PasswordAuthentication no --> yes
+#PermitEmptyPasswords no
+
+
