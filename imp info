@@ -14,5 +14,7 @@ vi sshd_config
 # To disable tunneled clear text passwords, change to no here!
 PasswordAuthentication no --> yes
 #PermitEmptyPasswords no
+docker rm -vf $(docker ps -aq)
+
 
 
